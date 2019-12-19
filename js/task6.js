@@ -4,10 +4,10 @@ const numbers = [];
 let total = 0;
 do {
   input = prompt('Введите ваше число');
-  if (Number(input) !== Number(input)) {
+  if (isNaN(input) === true ) {
     alert('Было введено не число, попробуйте еще раз');
   }
-  if (input !== null && Number(input) === Number(input)) {
+  if (input !== null && isNaN(input) === false) {
     numbers.push(input);
   }
 } while (input !== null);
@@ -18,3 +18,5 @@ if (numbers.length > 0) {
   }
   console.log(`Общая сумма чисел равна ${total}`);
 }
+// (Number(input) !== Number(input))
+// (input !== null && Number(input) === Number(input))
